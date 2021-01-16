@@ -19,4 +19,4 @@ end
 function 
 
 refinedstorage.extractItem({name="minecraft:diamond"}, 2, 1)
-printInfo(test)
+checkStorage(test)
