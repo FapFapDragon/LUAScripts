@@ -1,14 +1,15 @@
 local side = 5
 local itemName = arg[1]
-local amount = arg[2]
-test = refinedstorage.getItem({name=itemName})
+local amount = tonumber(arg[2])
 
-function checkStorage (item)
+
+function checkStorage (itemName)
+    item = refinedstorage.getItem({name=itemName})
     if (item.count == nil) then
         print("Sorry, we don't have any of that")
         return false
     elseif (item.count < amount) then
-        print("Sorry we only have" .. item.count .. " " .. itemName .. " avalible")
+        print("Sorry we only have " .. item.count .. " " .. itemName .. " avalible")
         return false
     else 
         return true
@@ -16,7 +17,13 @@ function checkStorage (item)
     --print(item.name .. " : " .. item.count)
 end
 
-function 
+function getItem(name)
+    if (checkStorage(name)) then
+        refinedstorage.extractItem({name=itemName, 2, 1)
+    else
+        return false
+    end
+end
 
-refinedstorage.extractItem({name="minecraft:diamond"}, 2, 1)
-checkStorage(test)
+
+getItem(itemName)
