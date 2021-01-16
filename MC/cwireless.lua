@@ -12,9 +12,9 @@ while true do
     local event, modemSide, senderChannel, 
     replyChannel, message, senderDistance = os.pullEvent("modem_message")
     argz = Split(message, " ");
-    if (argz[1] == "get") then
+    if (argz[1] == "cget") then
         shell.run ("get "..argz[2].." "..argz[3])
-    elseif (argz[1] == "dump") then
+    elseif (argz[1] == "cdump") then
         shell.run("dump")
     end
 end
