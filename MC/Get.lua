@@ -17,9 +17,9 @@ function checkStorage (itemName)
     --print(item.name .. " : " .. item.count)
 end
 
-function getItem(name)
-    if (checkStorage(name)) then
-        refinedstorage.extractItem({name=itemName}, 2, 1)
+function getItem(id)
+    if (checkStorage(id)) then
+        refinedstorage.extractItem({name=id}, amount, side)
     else
         return false
     end
