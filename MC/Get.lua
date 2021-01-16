@@ -19,7 +19,7 @@ end
 
 function getItem(name)
     if (checkStorage(name)) then
-        refinedstorage.extractItem({name=itemName, 2, 1)
+        refinedstorage.extractItem({name=itemName}, 2, 1)
     else
         return false
     end
