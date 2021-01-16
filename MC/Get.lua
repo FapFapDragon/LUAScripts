@@ -1,4 +1,6 @@
-local side = "left"
+local side = 5
+local itemName = arg[1]
+local amount = arg[2]
 test = refinedstorage.getItem({name="minecraft:diamond"})
 
 function printInfo (item)
