@@ -1,5 +1,5 @@
 local side = "left"
-test = refinedStorage.getItem({name="minecraft:diamond"})
+test = refinedstorage.getItem({name="minecraft:diamond"})
 
 function printInfo (item)
     if (item.count == nil) then
